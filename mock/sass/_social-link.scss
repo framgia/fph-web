@@ -1,0 +1,21 @@
+/* social link */
+.fph-social-links {
+	li {
+		float: left;
+		margin-right: 15px;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			border-radius: 5px;
+			border: 1px solid $color2;
+			color: $color2;
+			line-height: 34px;
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+}

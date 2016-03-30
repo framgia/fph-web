@@ -1,0 +1,2 @@
+# osusume
+Osusume Template
