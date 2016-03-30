@@ -1,10 +1,6 @@
 /* style.scss */
 
 @import "sass/style-sass";
-@import "sass/fonts";
-@import "sass/common";
-@import "sass/header";
-@import "sass/footer";
-@import "sass/social-link";
-@import "sass/section";
-@import "sass/responsive";
+@import "sass/utilities/all";
+@import "sass/atoms/all";
+@import "sass/modules/all";

@@ -1,0 +1,50 @@
+@mixin overlay-dot {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(images/pattern.png) top left repeat;
+}
+
+/* background attachment */
+.bg-attachment {
+    position: relative;
+    &:before {
+        @include overlay-dot;
+    }
+    &.home {
+        padding-bottom: 24.57%;
+        background: url(images/our-vision.jpg) 0 0 no-repeat;
+        background-size: 100% auto;
+        background-attachment: fixed;
+        margin-bottom: 110px;
+        .slogan {
+            position: absolute;
+            width: 29.71%;
+            height: 60.47%;
+            left: 50%;
+            margin-left: -14.855%;
+            top: 73.26%;
+            background-image: url(images/from-asia-to-the-world.png);
+            background-size: cover;
+        }
+    }
+    &.career {
+        padding-bottom: 37.71%;
+        background: url(images/career-at-framgia.jpg) 0 200px no-repeat;
+        background-size: 100% auto;
+        background-attachment: fixed;
+        .slogan {
+            position: absolute;
+            width: 67.14%;
+            height: 100%;
+            left: 50%;
+            margin-left: -33.57%;
+            top: 0;
+            background-image: url(images/from-asia-to-the-world-white.png);
+            background-size: cover;
+        }
+    }
+}

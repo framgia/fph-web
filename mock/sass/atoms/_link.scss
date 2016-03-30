@@ -1,0 +1,37 @@
+/* link */
+a {
+    @extend %transition;
+    color: $color1;
+    text-decoration: none;
+    outline: none;
+    &:hover,
+    &:active {
+        color: $color2;
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+/* detail link */
+.detail {
+    color: $color2;
+    padding-left: 15px;
+    position: relative;
+    &:after {
+        @extend %transition;
+        position: absolute;
+        content: "";
+        @include triangle-right(5px, 5px, $color2);
+        top: 5px;
+        left: 0;
+    }
+    &:hover {
+        color: $color1;
+        &:after {
+            border-left-color: $color1;
+        }
+    }
+}
+
