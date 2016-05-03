@@ -1,0 +1,295 @@
+/* reset slider default style */
+.owl-theme {
+    .owl-controls {
+        margin: 0;
+        .owl-page {
+            span {
+                background: none;
+            }
+        }
+        &.clickable .owl-buttons div:hover {
+            opacity: 1;
+        }
+    }
+}
+
+/* owl life */
+.owl-life {
+    .owl-wrapper-outer {
+        background-color: $color2;
+    }
+}
+
+/* section slider - career page */
+.owl-theme .owl-controls {
+    .owl-buttons {
+        div {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            width: 30%;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+            opacity: 1;
+            &:hover {
+                cursor: w-resize;
+            }
+        }
+        div.owl-prev {
+            left: 0;
+            span {
+                left: 50%;
+                margin-left: -10px;
+            }
+        }
+        div.owl-next {
+            right: 0;
+            span {
+                right: 50%;
+                margin-right: -10px;
+            }
+        }
+    }
+}
+
+/* section activity */
+%owl-transform{
+    transform:scale(0.9);
+    position: relative;
+}
+
+@mixin owl-transform($scale) {
+    position: relative;
+    transform: scale($scale);
+}
+
+.section-slider-about,
+.section-slider-career {
+    .owl-wrapper-outer {
+        overflow: visible;
+        .owl-wrapper {
+            .owl-item {
+                position: relative;
+                .image-wrapper {
+                    transition: all .6s;
+                    position: relative;
+                }
+                .overlay {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(255,102,51,.3);
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #959595;
+                    text-align: center;
+                    opacity: 0;
+                    margin: 0 -60px;
+                }
+                &.active {
+                    position: relative;
+                    z-index: 3;
+                    .image-wrapper {
+                        transform: scale(1.11);
+                    }
+                    .overlay {
+                        background-color: transparent;
+                    }
+                    p {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* owl carousel scale -pagination */
+.owl-scale {
+    margin: 0 auto;
+    .owl-controls {
+        .owl-page {
+            height: 35px;
+            span.owl-numbers {
+                display: inline-block;
+                color: $color1;
+                font-style: 14px;
+                line-height: 34px;
+                height: 35px;
+                opacity: 1;
+                width: 48px;
+                border-radius: 0;
+                margin: 0 3px;
+                padding: 0;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0px;
+                    left: 0;
+                    background-color: #959595;
+                }
+            }
+            &.active span {
+                font-size: 24px;
+                line-height: 24px;
+                color: $color2;
+                &:after {
+                    background-color: $color2;
+                }
+            }
+        }
+    }
+}
+
+/* slider scale - about page */
+.owl-scale.s1 {
+    width: 558px;
+    .owl-controls {
+        margin-top: 35px;
+    }
+    .single-item {
+        .image-wrapper {
+            margin-bottom: 40px;
+        }
+    }
+    .owl-wrapper-outer {
+        .owl-wrapper {
+            .owl-item {
+                &.beforeActive {
+                    top: -22px;
+                    left: 20px;
+                    .image-wrapper {
+                        @include owl-transform(0.82);
+                    }
+
+                }
+                &.afterActive {
+                    top: 13px;
+                    left: -50px;
+                    .image-wrapper {
+                        @include owl-transform(0.73);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* slider scale - career page */
+.owl-scale.s2 {
+    width: 190px;
+    .owl-controls {
+        display: none!important;
+    }
+    .owl-wrapper-outer {
+        .owl-wrapper {
+            .owl-item {
+                &.beforeActive {
+                    top: -35px;
+                    left: 22px;
+                    .image-wrapper {
+                        @include owl-transform(0.7);
+                    }
+
+                }
+                &.afterActive {
+                    top: 22px;
+                    left: -22px;
+                    .image-wrapper {
+                        @include owl-transform(0.74);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.owl-controls.customize {
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    width: 55.32%;
+    .owl-page {
+        display: inline-block;
+        height: 35px;
+        span.owl-numbers {
+            @extend %transition;
+            display: inline-block;
+            color: $color1;
+            font-style: 14px;
+            line-height: 34px;
+            height: 35px;
+            opacity: 1;
+            width: 48px;
+            border-radius: 0;
+            margin: 0 3px;
+            padding: 0;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                bottom: 0px;
+                left: 0;
+                background-color: #959595;
+            }
+        }
+        &.active span {
+            font-size: 24px;
+            line-height: 24px;
+            color: $color2;
+            &:after {
+                background-color: $color2;
+            }
+        }
+    }
+    .owl-page {
+        height: 35px;
+        span.owl-numbers {
+            display: inline-block;
+            color: $color1;
+            font-style: 14px;
+            line-height: 34px;
+            height: 35px;
+            opacity: 1;
+            width: 48px;
+            border-radius: 0;
+            margin: 0 3px;
+            padding: 0;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                bottom: 0px;
+                left: 0;
+                background-color: #959595;
+            }
+        }
+        &.active span {
+            font-size: 24px;
+            line-height: 24px;
+            color: $color2;
+            &:after {
+                background-color: $color2;
+            }
+        }
+    }
+}
+
+

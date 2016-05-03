@@ -1,39 +1,76 @@
-$font-body: "Open Sans", Aria, sans-serif;
+// color variable
 
-$color1: #464646;
-$color2: #f96536;
+$color1: #464646; // body text color
+$color2: #e94820; // main color - orange
+$color3: #f5f5f5; // background color
+$color4: #fc653c; // light orange
+$color5: #e1e1e1; // border color, input border color
 
 %transition {
-  transition: all .3s;
-  -ms-transition: all .3s;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
+    transition: all .3s;
+    -ms-transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
 }
 
-%transition {
-  transition: all .3s;
-  -ms-transition: all .3s;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
+@mixin transition($time) {
+    transition: all $time;
+    -ms-transition: all $time;
+    webkit-transition: all $time;
+    -moz-transition: all $time;
 }
 
 %clearfix {
-  &:before,
-  &:after {
-      content: "";
-      display: table;
-  }
-  &:after {
-      clear: both;
-  }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin transform1 ($top, $left, $width, $height) {
+    -ms-transform: translate($top,$left) scale($width,$height); /* IE 9 */
+    -webkit-transform: translate($top,$left) scale($width,$height); /* Safari */
+    transform: translate($top,$left) scale($width,$height); /* Standard syntax */
+}
+
+@mixin translate($top, $left) {
+    -ms-transform: translate($top,$left); /* IE 9 */
+    -webkit-transform: translate($top,$left); /* Safari */
+    transform: translate($top,$left); /* Standard syntax */
+}
+
+@mixin scale($width, $height) {
+    -ms-transform: scale($width,$height); /* IE 9 */
+    -webkit-transform: scale($width,$height); /* Safari */
+    transform: scale($width,$height); /* Standard syntax */
+}
+
+@mixin triangle-right($half-height, $width, $color) {
+    width: 0;
+    height: 0;
+    border-top: $half-height solid transparent;
+    border-bottom: $half-height solid transparent;
+    border-left: $width solid $color;
+}
+
+@mixin triangle-left($half-height, $width, $color) {
+    width: 0;
+    height: 0;
+    border-top: $half-height solid transparent;
+    border-bottom: $half-height solid transparent;
+    border-right: $width solid $color;
 }
 
 @mixin bw($min-width, $max-width) {
-  @media screen and (min-width: $min-width) and (max-width: $max-width) {@content;}
+    @media screen and (min-width: $min-width) and (max-width: $max-width) {@content;}
 }
 @mixin min($min-width) {
-  @media screen and (min-width: $min-width) {@content;}
+    @media screen and (min-width: $min-width) {@content;}
 }
 @mixin max($max-width) {
-  @media screen and (max-width: $max-width) {@content;}
+    @media screen and (max-width: $max-width) {@content;}
 }
