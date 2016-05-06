@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
@@ -32,11 +33,11 @@
                 <!-- nav collapse -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="#">Services</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Services</a></li>
                         <li><a href="#">Why us?</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="career.html">Career</a></li>
+                        <li class="active"><a href="career.html">Career</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -64,7 +65,8 @@
             </div>
 
             <!-- section hiring -->
-            <section class="section-hiring">
+            <section class="section-hiring anchor-wrapper">
+                <div id="anchor"></div>
                 <div class="wrapper">
                     <div class="section-header">
                         <h2>Currently Hiring</h2>
@@ -76,7 +78,7 @@
                             <div class="section-sm">
                                 <h3>Mobile App Developers</h3>
                                 <p>Let your purpose be the innovations of tomorrow. Be as ambitious as Mark Zuckerberg, Tim Cook, Larry Ellison and other influential people in the tech world as we get the chance to work on developing mobile apps that can make a difference.</p>
-                                <a href="#" class="detail">Detail</a>
+                                <a href="#" data-toggle="modal" data-target="#mobileDev" class="detail">Detail</a>
                             </div>
                         </div>
 
@@ -84,17 +86,140 @@
                             <div class="section-sm">
                                 <h3>Web Developers</h3>
                                 <p>The world is predicated on being dependent and around both the Internet and technology. Make your ideas and skills be felt through the creation and enhancement of various web platforms and services as we go through the biggest culture shift in history which is influenced by mankind’s greatest proof of progress: Technology</p>
-                                <a href="#" class="detail">Detail</a>
+                                <a href="#" data-toggle="modal" data-target="#webDev" class="detail">Detail</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="mobileDev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Mobile App Developer</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="block-info">
+                                    <p class="title-sm">What will you be doing?</p>
+                                    <ul>
+                                        <li>- Analyze system requirements/specification</li>
+                                        <li>- Design, develop and test web application</li>
+                                        <li>- Coordinate with Project Manager to resolve issues</li>
+                                        <li>- Write technical documentation</li>
+                                        <li>- Support team members to resolve technical issues</li>
+                                        <li>- Directly commnunicate with Japanese customers in English</li>
+                                        <li>- New members of staff training</li>
+                                    </ul>
+                                </div>
+                                <div class="block-info">
+                                    <p class="title-sm">Education</p>
+                                    <ul>
+                                        <li>- Graduated from Colleague/University specialized in Information Technology or equivalent</li>
+                                        <li>- At least 2 years experience as a Web Developer with Java/Ruby on rails/PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="block-info">
+                                    <p class="title-sm">Technical Experience</p>
+                                    <ul>
+                                        <li>- Familiar with Java/Ruby/PHP programming languages</li>
+                                        <li>- Familiar with javascript/HTML/CSS</li>
+                                        <li>- Familiar with OOP methodology</li>
+                                        <li>- Experienced in Web Services protocol such as HTTP, REST, SOAP</li>
+                                        <li>- Experienced in MVC Framework (CodeIgniter, Struts, Spring, Hibernate, Ruby on Rails</li>
+                                        <li>- Familiar with Database Design (MySQL, PostgreSQL, SQLite)</li>
+                                        <li>- Have experience working with Linux system (CentOS, Ubuntu)</li>
+                                        <li>- Have experience working with version control system such as SVN, Git, redmine</li>
+                                        <li>- RSpec, unit testing and integration testing</li>
+                                    </ul>
+                                </div>
+                                <div class="block-info">
+                                    <p class="title-sm">We offer</p>
+                                    <ul>
+                                        <li>- Flat organization and open communication</li>
+                                        <li>- Friendly, flexible, and fun working environment</li>
+                                        <li>- Very attractive salary based on skills and experience</li>
+                                        <li>- Healthcare insurance</li>
+                                        <li>- Bonus depends on your performance and business status</li>
+                                        <li>- Great opportunity for career development</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="fph-btn btn-1 hvr-radial-out">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./ Modal -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="webDev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Web Developers</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="block-info">
+                                    <p class="title-sm">What will you be doing?</p>
+                                    <ul>
+                                        <li>- Analyze system requirements/specification</li>
+                                        <li>- Design, develop and test web application</li>
+                                        <li>- Coordinate with Project Manager to resolve issues</li>
+                                        <li>- Write technical documentation</li>
+                                        <li>- Support team members to resolve technical issues</li>
+                                        <li>- Directly commnunicate with Japanese customers in English</li>
+                                        <li>- New members of staff training</li>
+                                    </ul>
+                                </div>
+                                <div class="block-info">
+                                    <p class="title-sm">Education</p>
+                                    <ul>
+                                        <li>- Graduated from Colleague/University specialized in Information Technology or equivalent</li>
+                                        <li>- At least 2 years experience as a Web Developer with Java/Ruby on rails/PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="block-info">
+                                    <p class="title-sm">Technical Experience</p>
+                                    <ul>
+                                        <li>- Familiar with Java/Ruby/PHP programming languages</li>
+                                        <li>- Familiar with javascript/HTML/CSS</li>
+                                        <li>- Familiar with OOP methodology</li>
+                                        <li>- Experienced in Web Services protocol such as HTTP, REST, SOAP</li>
+                                        <li>- Experienced in MVC Framework (CodeIgniter, Struts, Spring, Hibernate, Ruby on Rails</li>
+                                        <li>- Familiar with Database Design (MySQL, PostgreSQL, SQLite)</li>
+                                        <li>- Have experience working with Linux system (CentOS, Ubuntu)</li>
+                                        <li>- Have experience working with version control system such as SVN, Git, redmine</li>
+                                        <li>- RSpec, unit testing and integration testing</li>
+                                    </ul>
+                                </div>
+                                <div class="block-info">
+                                    <p class="title-sm">We offer</p>
+                                    <ul>
+                                        <li>- Flat organization and open communication</li>
+                                        <li>- Friendly, flexible, and fun working environment</li>
+                                        <li>- Very attractive salary based on skills and experience</li>
+                                        <li>- Healthcare insurance</li>
+                                        <li>- Bonus depends on your performance and business status</li>
+                                        <li>- Great opportunity for career development</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="fph-btn btn-1 hvr-radial-out">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./ Modal -->
             </section>
             <!-- ./ section hiring -->
 
             <!-- background attachment -->
             <div class="bg-attachment career">
-                <div class="overlay"></div>
                 <div class="slogan"></div>
             </div>
             <!-- ./ background attachment -->
@@ -107,7 +232,7 @@
                             <div class="single-item">
                                 <div class="image-wrapper">
                                     <div class="overlay"></div>
-                                    <img src="images/staff1.jpg" alt="Framgia-staff">
+                                    <img src="images/staff2.jpg" alt="Framgia-staff">
                                 </div>
                             </div>
 
@@ -121,7 +246,7 @@
                             <div class="single-item">
                                 <div class="image-wrapper">
                                     <div class="overlay"></div>
-                                    <img src="images/staff1.jpg" alt="Framgia-staff">
+                                    <img src="images/staff3.jpg" alt="Framgia-staff">
                                 </div>
                             </div>
                         </div>

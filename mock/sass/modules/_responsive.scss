@@ -1,187 +1,161 @@
 /* Responsive Style */
 
 /*--- Wrapper Responsive ---*/
-.wrapper {    
-  @include max(1119px) {
-      width: 960px;
-  }
-  @include max(1023px) {
-      width: 960px;
-  }
-  @include max(979px) {
-      width: 780px;
-  }
-  @include max(799px) {
-      width: 740px;
-  }
-  @include max(767px) {
-      width: 620px;
-  }
-  @include max(639px) {
-      width: 440px;
-  }
-  @include max(479px) {
-      width: 300px;
-      padding-left: 0;
-      padding-right: 0;
-  }   
+.wrapper {
+    @include max(1119px) {
+        width: 960px;
+    }
+    @include max(1023px) {
+        width: 960px;
+    }
+    @include max(979px) {
+        width: 780px;
+    }
+    @include max(799px) {
+        width: 740px;
+    }
+    @include max(767px) {
+        width: 620px;
+    }
+    @include max(639px) {
+        width: 440px;
+    }
+    @include max(479px) {
+        width: 300px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media (min-width: 799px) {
-	.navbar-collapse.collapse {
-	  display: block!important;
-	}
+    .navbar-collapse.collapse {
+        display: block!important;
+    }
 }
 
-/*	
-	- iPad Portrait
-	- iPhone 6 Plus Landscape
-	- ...
-*/
-
-@media screen and (max-width: 991px) {	
-	.section-team .section-content {
-		text-align: center;
-		.team-image {
-			display: inline-block;
-		}
-	} 
-	.section-client .section-content > div:last-child > div {
-		border-bottom: 1px solid #ebebeb!important;
-	}
+@media screen and (max-width: 991px) {
+    .section-team .section-content {
+        text-align: center;
+        .team-image {
+            display: inline-block;
+        }
+    }
+    .section-client .section-content > .row:last-child {
+        > div {
+            border-bottom: 1px solid #ebebeb;
+        }
+    }
 }
 
-
-@media screen and (max-width: 799px) {	
-	#header {
-		.navbar-toggle {
-	    display: block;
-	    float: right;
-		}
-		.navbar-header {	
-			float: none;
-		}
-		.main-nav-box {
-			float: none;
-		}
-		.navbar-nav {
-			padding-top: 20px;
-		}
-		.navbar-nav > li {
-			float: none;
-			&:last-child {
-				border: none;
-			}
-		}		
-		.navbar-nav > li > a {
-			padding-left: 0px;
-			padding-right: 0;
-		}
-	}	
-	.section-client .section-content > div:last-child {
-		div:nth-last-child(1),
-		div:nth-last-child(2) {
-			border-bottom: none!important;
-		}
-	}
+@include bw(769px, 991px) {
+    .section-client .section-content {
+        .row div:nth-child(3n+3) {
+            border-right: none;
+            &:last-child {
+                > div:nth-last-child(1),
+                > div:nth-last-child(2),
+                > div:nth-last-child(3) {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
 }
 
-@include bw(768px, 991px) {
-	.section-client .section-content .row div:nth-child(3n+3) {
-		border-right: none;
-	}
-	.section-client .section-content > div:last-child  {
-		div:nth-last-child(3) {
-			border-bottom: none!important;
-		}
-	}
+@include max(767px) {
+    .section-client .section-content {
+        .row {
+            > div:nth-child(2n) {
+                border-right: none;
+            }
+            &:last-child {
+                div:nth-last-child(1),
+                div:nth-last-child(2) {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .attachment-content h2 {
+        font-size: 35px;
+    }
 }
 
-
-/*
-	- iPhone 6 Landscape
-	- Samsung Galaxy S4 Landscape
-	- ...
-*/
-@media screen and (max-width: 679px) {
-	
+@media screen and (max-width: 669px) {
+    .section-team {
+        .section-content .team-image {
+            display: block;
+        }
+        .col-left, .col-right {
+            float: none;
+            width: 90%;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .section-header.s2 h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .section-slider-contact .contact p {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 }
 
-
-/*
-	- Google Nexus 5 Landscape
-	- iPhone 5 Landscape	
-	- iPhone 4 Landscape
-	- ...
-*/
-@media screen and (max-width: 639px) {
-	.section-team {
-		.section-content .team-image {
-			display: block;
-		}
-		.col-left, .col-right {
-			float: none;
-			width: 90%;
-			margin: 0 auto;
-			img {
-				width: 100%;
-			}
-		}
-	}
+@media screen and (max-width: 479px) {
+    .section-intro,
+    .section-service .wrapper,
+    .section-vision,
+    .section-client,
+    .section-development {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .section-career {
+        padding-top: 30px;
+    }
+    .section-intro .fph-btn {
+        margin-bottom: 30px;
+    }
+    .fph-section h2 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+    .section-intro .desc {
+        font-size: 18px;
+    }
+    .team-image {
+        margin-bottom: 20px;
+    }
+    .career-bottom {
+        padding-top: 30px;
+        text-align: center;
+        p, .fph-btn {
+            float: none;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    .section-service .row .col-md-4 {
+        border-right: none;
+    }
+    .section-intro .section-content p {
+        font-size: 20px;
+    }
+    .owl-theme .owl-controls .owl-buttons div {
+        width: 50px;
+    }
+    .section-client .section-content .row div:nth-child(2n) {
+        border-right: none;
+    }
 }
 
-/*
-	- iPhone 6 Plus Portrait
-	- iPhone 6 Portrait
-	- Google Nexus 5 Portrait
-	- Samsung Galaxy S4
-	- ...
-*/
-@media screen and (max-width: 479px) {	
-	.section-intro,
-	.section-service .wrapper,
-	.section-vision,
-	.section-client,
-	.section-development {
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-	.section-career {
-		padding-top: 30px;
-	}
-	.section-intro .fph-btn {
-		margin-bottom: 30px;
-	}
-	.fph-section h2 {
-		font-size: 30px;
-		line-height: 1.3;
-	}
-	.section-intro .desc {
-		font-size: 18px;
-	}
-	.team-image {
-		margin-bottom: 20px;
-	}
-	.career-bottom {
-		padding-top: 30px;
-		text-align: center;
-		p, .fph-btn {
-			float: none;
-		}
-		p {
-			margin-bottom: 20px;
-		}
-	}
-	.section-service .row .col-md-4 {
-	    border-right: none; 
-	}
-	.section-intro .section-content p {
-		font-size: 20px;
-	}
-	.owl-theme .owl-controls .owl-buttons div {
-		width: 50px;
-	}	
-	.section-client .section-content .row div:nth-child(2n) {
-		border-right: none;
-	}	
+@include max(799px) {
+    .section-more-info .row .col {
+        width: 100%;
+    }
 }

@@ -1,19 +1,24 @@
 /* page header */
 .fph-page-header {
     position: relative;
-    padding: 128px 0 160px;
+    padding: 131px 0 163px;
+    .page-title,
+    .desc {
+        color: #fff;
+        position: relative;
+        z-index: 3;
+    }
     .page-title {
         font-size: 50px;
         line-height: 60px;
         font-weight: bold;
-        color: $color2;
+        color: #fff;
         margin: 0 0 5px;
     }
     .desc {
         font-size: 24px;
         font-weight: 300;
         line-height: 30px;
-        color: #959595;
     }
     .overlay {
         position: absolute;
@@ -27,11 +32,23 @@
 
 /* page intro */
 .page-intro {
+    position: relative;
     text-align: center;
-    padding: 45px 0 45px;
+    padding: 43px 0 43px;
     border-bottom: 1px solid $color5;
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url(images/noise-bg.png) repeat;
+        opacity: .9;
+    }
     p {
         font-size: 24px;
+        position: relative;
+        z-index: 3;
     }
 }
 
@@ -42,7 +59,6 @@
         background-size: cover;
         .page-title,
         .desc {
-            color: #fff;
             position: relative;
             z-index: 3;
         }
@@ -54,10 +70,19 @@
         padding: 95px 0 55px;
         border-bottom: 1px solid #f0f0f0;
         background: url(images/our.png) 0 65px no-repeat;
+        @include max(799px) {
+            background: none;
+        }
     }
     .nav-tabs {
         border-bottom: none;
         padding-left: 240px;
+        @include max(799px) {
+            padding-left: 0;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
         > li {
             float: none;
             margin-bottom: 0;
@@ -103,6 +128,7 @@
     }
     #test-tab-content {
         margin-bottom: 35px;
+        padding-top: 55px;
         .tab-pane{
             display: block;
             opacity: 0;
@@ -118,6 +144,7 @@
         }
     }
     #vision {
+        margin-top: -30px;
         .section-vision-standard {
             padding-top: 0;
         }
@@ -139,9 +166,12 @@
 .career-page .fph-page-header {
     background: url(images/career-page-title-bg.jpg) no-repeat;
     background-size: cover;
+    padding-bottom: 150px;
+    .page-title {
+        margin-bottom: 15px;
+    }
     .page-title,
     .desc {
-        color: #fff;
         position: relative;
         z-index: 3;
     }
@@ -151,8 +181,37 @@
 .contact-page {
     .fph-page-header {
         padding-bottom: 175px;
+        .page-title {
+            color: $color2;
+        }
+        .desc {
+            color: #959595;
+        }
     }
     .contact-form {
         padding-bottom: 110px;
+    }
+}
+
+/* service */
+.service-page {
+    .section-service {
+        padding-top: 70px;
+        padding-bottom: 45px;
+        .row .col-md-4 {
+            margin-bottom: 30px;
+        }
+    }
+}
+.page-header-wrapper.service {
+    background: url(images/page-title-bg-service.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* why us page */
+.why-us-page {
+    .fph-page-header {
+        background: url(images/page-title-bg-why-us.jpg) no-repeat;
+        background-size: cover;
     }
 }
