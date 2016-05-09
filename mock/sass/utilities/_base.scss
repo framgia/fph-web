@@ -1,21 +1,6 @@
 /* common style */
 $font-body: "Open Sans", Aria, sans-serif;
 
-/* body */
-html{
-    overflow-x: hidden;
-}
-
-body {
-    position: relative;
-    font-family: $font-body;
-    font-size: 14px;
-    line-height: 1.4;
-    font-weight: 300;
-    color: $color1;
-    padding-top: 76px;
-}
-
 .wrapper {
     @extend %clearfix;
     width: 980px;
@@ -23,17 +8,6 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     position: relative;
-}
-
-/* list */
-ul, ol {
-    margin: 0;
-    padding: 0;
-    li {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
 }
 
 .clearfix {
@@ -61,3 +35,24 @@ div {
     }
 }
 
+@include keyframes(hvr-out) {
+    0% { opacity: 0; }
+    20% { opacity: 1 }
+    100% { left: -30px; right: -30px }
+}
+
+.anchor-wrapper {
+    position: relative;
+    #anchor {
+        position: absolute;
+        top: -76px;
+    }
+}
+
+.row {
+    .col,
+    .col-image,
+    .col-content {
+        float: left;
+    }
+}

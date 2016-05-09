@@ -22,7 +22,7 @@ jQuery(document).ready(function(){
             var config = {
                 singleItem: $(this).data("singleitem"),
                 items: $(this).data("items"),
-                itemsDesktop: [1160,3],
+                itemsDesktop: [1400,3],
                 itemsTablet: [799,4],
                 itemsTabletSmall: [768,2],
                 itemsMobile: [480,1],
@@ -30,7 +30,7 @@ jQuery(document).ready(function(){
                 navigation: $(this).data("navigation"),
                 navigationText: $(this).data("navigationtext"),
                 autoPlay: $(this).data("autoplay"),
-                slideSpeed: $(this).data("slidep peed"),
+                slideSpeed: $(this).data("slidep peed")
             };
             jQuery(this).owlCarousel(config);
         });
@@ -97,6 +97,17 @@ jQuery(document).ready(function(){
 
     var appObj = new fph();
     appObj.init();
+
+    // Scroll to anchor
+    var anchor = 0;
+    $(window).scroll(function () {
+        if ( anchor == 0 ){
+            $('html,body').animate({
+              scrollTop: jQuery("#anchor").offset().top
+            }, 700);
+            anchor++;
+        }
+    });
 
     // match height
     $.fn.matchHeight = function() {
