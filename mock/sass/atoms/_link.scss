@@ -1,4 +1,12 @@
 /* detail link */
+
+a {
+    @extend %transition;
+    &:focus {
+        outline: none;
+    }
+}
+
 .detail {
     color: $color2;
     padding-left: 15px;

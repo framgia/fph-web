@@ -540,7 +540,7 @@
                 color: $color2;
                 margin-bottom: 25px;
             }
-            p {
+            > p {
                 line-height: 28px;
                 margin-bottom: 25px;
             }
@@ -569,3 +569,191 @@
         }
     }
 }
+
+/* section quality */
+.section-quality {
+    padding-top: 125px;
+    padding-bottom: 80px;
+    .wrapper {
+        position: relative;
+        &:before {
+            position: absolute;
+            z-index: -1;
+            content: "";
+            width: 579px;
+            height: 157px;
+            background: url(images/quality.png);
+            top: -70px;
+            left: 20px;
+        }
+    }
+    .nav-tabs {
+        padding-bottom: 60px;
+        padding-left: 480px;
+    }
+    .tab-content {
+        padding-top: 40px;
+    }
+    .panel-group {
+        .col {
+            float: left;
+            width: 33.33333%;
+        }
+    }
+    .panel-title a span {
+        width: 15px;
+        margin-right: 15px;
+    }
+    .panel-body {
+        padding-left: 30px;
+        h5 {
+            font-size: 14px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+    }
+    .tab-pane {
+        .row + .row {
+            margin-top: 30px;
+        }
+    }
+}
+
+/* section keep quality */
+.section-keeping-quality {
+    padding-top: 65px;
+    padding-bottom: 105px;
+    .section-header {
+        margin-bottom: 55px;
+    }
+    .row {
+        margin-bottom: 40px;
+        &:first-child {
+            margin-bottom: 45px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .col,
+    .col-left,
+    .col-right {
+        float: left;
+        padding: 0 20px;
+    }
+    .col {
+        width: 50%;
+    }
+    .col-left {
+        width: 55.671%;
+    }
+    .col-right {
+        width: 44.329%;
+    }
+}
+
+.block-text1 {
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color: $color2;
+        margin-bottom: 15px;
+    }
+    p {
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    .panel-group .panel + .panel {
+        margin-top: 15px;
+    }
+    .panel-body {
+        padding-bottom: 10px;
+    }
+}
+
+/* section top quality */
+.section-top-quality {
+    background: url(images/top-quality-bg.jpg);
+    background-size: cover;
+    padding-bottom: 41.3%;
+    position: relative;
+    .section-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .row {
+        margin: 0;
+        height: 50%;
+        .col {
+            width: 33.33333%;
+            height: 100%;
+        }
+    }
+    .col {
+        position: relative;
+        text-align: center;
+        .overlay {
+            @extend %transition;
+            position: absolute;
+            content: "";
+            top: 10%;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: -webkit-linear-gradient(0deg, #e94820 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(0deg, #e94820 0%, rgba(255,255,255,0) 100%);
+            opacity: 0;
+        }
+        &:hover {
+            .overlay {
+                opacity: .8;
+            }
+            p {
+                bottom: 44%;
+                opacity: 1;
+            }
+            h4 {
+                color: #fff;
+            }
+        }
+        &.business {
+            background-color: $color2;
+            &:after {
+                display: none;
+            }
+            img {
+                margin-top: 17%;
+            }
+            h4 {
+                color: #fff;
+            }
+        }
+        h4 {
+            @extend %transition;
+            font-weight: 300;
+            font-size: 24px;
+            position: absolute;
+            z-index: 3;
+            bottom: 27%;
+            width: 100%;
+        }
+        p {
+            @extend %transition;
+            position: absolute;
+            z-index: 3;
+            font-weight: 400;
+            line-height: 22px;
+            bottom: 46%;
+            margin: 0;
+            width: 100%;
+            padding: 0 12%;
+            opacity: 0;
+            color: #fff;
+        }
+    }
+}
+
+
