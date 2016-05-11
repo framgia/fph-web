@@ -26,7 +26,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(233,72,32,.6);
+        background-color: rgba(233,72,32,.4);
     }
 }
 
@@ -34,8 +34,9 @@
 .page-intro {
     position: relative;
     text-align: center;
-    padding: 43px 0 43px;
-    border-bottom: 1px solid $color5;
+    .wrapper {
+        padding: 44px 20px 0;
+    }
     .overlay {
         position: absolute;
         width: 100%;
@@ -49,6 +50,8 @@
         font-size: 24px;
         position: relative;
         z-index: 3;
+        padding-bottom: 44px;
+        border-bottom: 1px solid $color5;
     }
 }
 
@@ -82,48 +85,6 @@
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-        }
-        > li {
-            float: none;
-            margin-bottom: 0;
-            &.active,
-            &:focus,
-            &:hover {
-                outline: none;
-                > a {
-                    border: none;
-                    &:hover {
-                        border: none;
-                    }
-                }
-            }
-            &.active {
-                > a {
-                    font-weight: bold;
-                    background-color: transparent;
-                    color: #464646;
-                    padding-left: 40px;
-                    position: relative;
-                    &:before {
-                        @include triangle-right(8px, 8px, $color2);
-                        position: absolute;
-                        content: "";
-                        top: 18px;
-                        left: 0;
-                    }
-                }
-            }
-            > a {
-                margin: 0;
-                padding: 0;
-                border: none;
-                border-radius: 0;
-                font-size: 36px;
-                color: #959595;
-                &:hover {
-                    background-color: transparent;
-                }
-            }
         }
     }
     #test-tab-content {
@@ -206,6 +167,12 @@
 .page-header-wrapper.service {
     background: url(images/page-title-bg-service.jpg) no-repeat;
     background-size: cover;
+    .page-intro {
+        border-bottom: 1px solid $color5;
+        .wrapper {
+            border-bottom: none;
+        }
+    }
 }
 
 /* why us page */
@@ -213,5 +180,8 @@
     .fph-page-header {
         background: url(images/page-title-bg-why-us.jpg) no-repeat;
         background-size: cover;
+    }
+    .section-slider-contact {
+        padding-top: 0;
     }
 }

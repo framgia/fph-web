@@ -57,4 +57,20 @@
             padding: 50px 0;
         }
     }
+    &.why-us {
+        padding-bottom: 18%;
+        background: url(images/attachment-why-us.jpg) 0 250px / 100% auto no-repeat fixed;
+        .overlay-black {
+            @include overlay {
+                background: rgba(0,0,0,.6);
+            }
+        }
+        .attachment-content {
+            padding-top: 6%;
+            p {
+                font-style: italic;
+                line-height: 1.8;
+            }
+        }
+    }
 }

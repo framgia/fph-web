@@ -98,11 +98,11 @@ jQuery(document).ready(function(){
     var appObj = new fph();
     appObj.init();
 
-    // Scroll to anchor
+    //Scroll to anchor
     var anchor = 0;
-    $(window).scroll(function () {
+    jQuery(window).scroll(function () {
         if ( anchor == 0 ){
-            $('html,body').animate({
+            jQuery("html,body").animate({
               scrollTop: jQuery("#anchor").offset().top
             }, 700);
             anchor++;
@@ -158,27 +158,24 @@ jQuery(document).ready(function(){
 
     // Back to top
     // hide #back-top first
-    $("#back-top").hide();
+    jQuery("#back-top").hide();
 
     // fade in #back-top
-    $(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                $("#back-top").fadeIn();
+    jQuery(function () {
+        jQuery(window).scroll(function () {
+            if (jQuery(this).scrollTop() > 100) {
+                jQuery("#back-top").fadeIn();
             } else {
-                $("#back-top").fadeOut();
+                jQuery("#back-top").fadeOut();
             }
         });
 
         // scroll body to 0px on click
-        $("#back-top").click(function () {
-            $("body,html").animate({
+        jQuery("#back-top").click(function () {
+            jQuery("body,html").animate({
                 scrollTop: 0
             }, 800);
             return false;
         });
     });
 });
-
-
-
